@@ -58,7 +58,7 @@ const WeatherApp = () => {
       <WeatherCard city="London" latitude="51.51" longitude="-0.13" />
       <WeatherCard city="New York" latitude="40.7128" longitude="-74.006" />
       <WeatherCard city="Tokyo" latitude="35.6895" longitude="139.6917" />
-      <WeatherCard city="India" latitude="-33.8688" longitude="151.2093" />
+      <WeatherCard city="IndiaNew Delhi, India" latitude="-33.8688" longitude="151.2093" />
     </div>
 
     
