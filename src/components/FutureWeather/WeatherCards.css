@@ -1,0 +1,44 @@
+.usniq-cities-app {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px; ;
+  }
+  
+
+  .usniq-cities-app h2 {
+    text-align: center;
+    color: #000000;
+  }
+
+  .usniq-weather-card {
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .usniq-weather-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .usniq-weather-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+  
+  .usniq-temperature {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .usniq-condition {
+    font-size: 18px;
+  }
+  
