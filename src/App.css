@@ -1,9 +1,10 @@
 body{
     margin: 0;
+    background-color: #101010;
 }
 
 .App h1{
     text-align: center;
-    color: #000000;
+    color: #ffffff;
     margin-top: 20px;
 }

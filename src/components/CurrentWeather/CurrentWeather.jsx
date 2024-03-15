@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './WeatherApp.css';
+import dummy from '../../assets/dummy.png';
 
 const WeatherApp = () => {
   const [weather, setWeather] = useState(null);
@@ -37,6 +38,15 @@ const WeatherApp = () => {
     setCity(e.target.value);
   };
 
+  const renderDummyImage = () => {
+    return (
+      <div className="dummy-image-container">
+        <img src={dummy} alt="Dummy"  />
+        
+      </div>
+    );
+  };
+
   return (
     <div className="weather-app">
       <h2>Current Weather</h2>
@@ -51,22 +61,23 @@ const WeatherApp = () => {
       </div>
       {loading && <div className="loading">Loading...</div>}
       {error && <div className="error">Error: {error}</div>}
+      {(!weather && city.trim() === '') && renderDummyImage()}
       {weather && (
         <div>
           <div className="weather-info">
             <h2>{weather.location.name}, {weather.location.country}</h2>
-            <p>Temperature: {weather.current.temp_c}°C</p>
-            <p>Condition: {weather.current.condition.text}</p>
             <img src={weather.current.condition.icon} alt="weather icon" />
+            <p>Temperature: {weather.current.temp_c}°C</p>
             <p>Wind: {weather.current.wind_kph} km/h</p>
             <p>Humidity: {weather.current.humidity}%</p>
+            <p>Condition: {weather.current.condition.text}</p>
             <p>Visibility: {weather.current.vis_km} km</p>
           </div>
           <div className="forecasting">
             <hr className='hr' />
             <h2>Next 3 days</h2>
-          <div className="forecast">
             
+          <div className="forecast">
             {weather.forecast.forecastday.map(day => (
               <div key={day.date}>
                 <h3>{day.date}</h3>

@@ -9,7 +9,7 @@
 
   .usniq-cities-app h2 {
     text-align: center;
-    color: #000000;
+    color: #ffffff;
   }
 
   .usniq-weather-card {
@@ -18,7 +18,8 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     margin: 20px;
     transition: transform 0.3s ease-in-out;
   }
