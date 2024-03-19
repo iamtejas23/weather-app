@@ -67,7 +67,7 @@ const WeatherApp = () => {
           <div className="weather-info">
             <h2>{weather.location.name}, {weather.location.country}</h2>
             <img src={weather.current.condition.icon} alt="weather icon" />
-            <p>Temperature: {weather.current.temp_c}°C</p>
+            <p className='temp'>Temperature: {weather.current.temp_c}°C</p>
             <p>Wind: {weather.current.wind_kph} km/h</p>
             <p>Humidity: {weather.current.humidity}%</p>
             <p>Condition: {weather.current.condition.text}</p>
