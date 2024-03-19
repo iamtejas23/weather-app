@@ -9,6 +9,8 @@ const WeatherApp = () => {
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
 
+  const rapidAPIKey = process.env.REACT_APP_RAPIDAPI_KEY;
+
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -20,7 +22,7 @@ const WeatherApp = () => {
           days: '3'
         },
         headers: {
-          'X-RapidAPI-Key': '12e8d1a8d6mshbb855d36f03ce81p19fc39jsn0483fa7a2d5d',
+          'X-RapidAPI-Key': rapidAPIKey,
           'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
       };

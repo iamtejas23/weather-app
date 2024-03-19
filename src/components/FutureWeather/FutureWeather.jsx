@@ -5,6 +5,9 @@ import './WeatherCards.css'; // Import the CSS file
 const WeatherCard = ({ city, latitude, longitude }) => {
   const [weatherData, setWeatherData] = useState(null);
 
+
+  const rapidAPIKey = process.env.REACT_APP_RAPIDAPI_KEY;
+
   useEffect(() => {
     const fetchData = async () => {
       const options = {
@@ -12,7 +15,7 @@ const WeatherCard = ({ city, latitude, longitude }) => {
         url: 'https://weatherapi-com.p.rapidapi.com/current.json',
         params: { q: `${latitude},${longitude}` },
         headers: {
-          'X-RapidAPI-Key': '12e8d1a8d6mshbb855d36f03ce81p19fc39jsn0483fa7a2d5d',
+          'X-RapidAPI-Key': rapidAPIKey,
           'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com',
         },
       };
@@ -26,7 +29,7 @@ const WeatherCard = ({ city, latitude, longitude }) => {
     };
 
     fetchData();
-  }, [latitude, longitude]);
+  }, [latitude, longitude, rapidAPIKey]); // Include rapidAPIKey in the dependency array
 
   return (
     <div className="weather-card usniq-weather-card">
