@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+.env
+
 # production
 /build
 
@@ -21,6 +23,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.env
 
 process.env.REACT_APP_RAPIDAPI_KEY
