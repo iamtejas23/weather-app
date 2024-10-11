@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 .env
 
-
+process.env.REACT_APP_RAPIDAPI_KEY
