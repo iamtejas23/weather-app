@@ -23,7 +23,6 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Us</h4>
             <p>Email: support@weatherapp.com</p>
-            <p>Phone: (123) 456-7890</p>
           </div>
         </div>
         <div className="footer-bottom">
